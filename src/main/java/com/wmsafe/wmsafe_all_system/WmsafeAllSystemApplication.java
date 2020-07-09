@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class WmsafeAllSystemApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(WmsafeAllSystemApplication.class, args);
     }
 
