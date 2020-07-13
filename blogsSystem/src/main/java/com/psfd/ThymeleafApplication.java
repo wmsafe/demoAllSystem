@@ -1,14 +1,13 @@
-package com.wmsafe.wmsafe_all_system;
+package com.psfd;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WmsafeAllSystemApplication {
+public class ThymeleafApplication {
 
     public static void main(String[] args) {
-
-        SpringApplication.run(WmsafeAllSystemApplication.class, args);
+        SpringApplication.run(ThymeleafApplication.class, args);
     }
 
 }
