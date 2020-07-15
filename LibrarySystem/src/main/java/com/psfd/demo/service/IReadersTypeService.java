@@ -1,7 +1,7 @@
 package com.psfd.demo.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.psfd.demo.entity.ReadersType;
-import com.baomidou.mybatisplus.service.IService;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.service.IService;
  * </p>
  *
  * @author Mht
- * @since 2020-07-11
+ * @since 2020-07-14
  */
 public interface IReadersTypeService extends IService<ReadersType> {
 
