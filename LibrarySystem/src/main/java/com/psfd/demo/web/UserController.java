@@ -31,6 +31,7 @@ public class UserController {
         List<User> userList = iUserService.list();
         for (User user1 : userList) {
             if (user.getUsername().equals(user1.getUsername()) || user.getPassword().equals(user1.getPassword())) {
+                modelAndView.addObject("user",user);
                 modelAndView.setViewName("/manage");
                 return modelAndView;
             }
