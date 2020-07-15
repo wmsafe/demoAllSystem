@@ -5,10 +5,54 @@
     <title>Title</title>
     <link rel="stylesheet" href="/static/css/bootstrap.css">
     <script type="javascript" src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/jquery-1.8.3.min.js"></script>
 </head>
-<body>
-    <div>
-        <img src="/static/img/u=2608899879,1464610536&fm=26&gp=0.jpg">
+<script>
+function check(form) {
+    if(form.username.value === "" && form.password.value === ""){
+        alert("请输入用户名和密码！！！");
+    }else if (form.username.value === ""){
+        alert("请输入用户名！！！");
+    }else if (form.password.value === ""){
+        alert("请输入密码！！！");
+    }
+}
+</script>
+<body style="background-color: #05ea7e">
+<div style="margin-top: 100px;margin-left: 400px; border: 1px #000000 solid; background: url(../../static/img/index.jpg) no-repeat; width: 535px; height: 302px;">
+    <div style="width: 588px;">
+        <div
+                style="color: #508e46; float: left; font-size: 32px; margin-top: 28px; padding-left: 45px; font-weight: bold;margin-left: 70px">
+            商场VIP消费查询系统</div>
     </div>
+
+    <div style="text-align: center; margin-top: 10px; border: 0px #ff0000 solid;">
+        <form name="form" style="margin: 0" action="/login"
+              method="post">
+            <table id="id1" border="0" cellpadding="0" cellspacing="0" style="margin-left: 130px;margin-top: 100px">
+                <tr>
+                    <td style="font-size: 16px;">用户名：</td>
+                    <td style="padding-left: 10px;"><input type="text"
+                                                           name="username" style="border: 1px #80a9b9 solid; width: 150px"
+                                                           value="" /></td>
+                </tr>
+                <tr height="40">
+                    <td style="font-size: 16px;">密&nbsp;&nbsp;&nbsp;码：</td>
+                    <td style="padding-left: 10px;"><input type="password"
+                                                           name="password" style="border: 1px #80a9b9 solid; width: 150px"
+                                                           value="" /></td>
+                </tr>
+                <tr height="40">
+                    <td height="60" align="center" valign="middle" colspan="2"
+                        style="margin-top: 50px;"><input type="submit"
+                                                         value="登&nbsp; 陆" onclick="check(form)" /></td>
+                </tr>
+            </table>
+        </form>
+        <a href="/user/insertUser.html" style="text-decoration: none;margin-left: -20px">没有账号？点此注册</a>
+    </div>
+</div>
+
 </body>
+
 </html>
