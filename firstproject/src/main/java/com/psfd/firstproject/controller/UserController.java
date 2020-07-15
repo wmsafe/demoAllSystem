@@ -30,6 +30,11 @@ public class UserController {
         System.out.println(username + "-------" + password);
         List<User> list = userServicel.list();
         ModelAndView andView = new ModelAndView();
+        if(username.equals("") || password.equals("")){
+            andView.setViewName("/login/login");
+            return andView;
+        }
+
         for (User user : list) {
             if (username.equals(user.getUsername()) && password.equals(user.getPassword())){
                 andView.setViewName("/framework/framework");

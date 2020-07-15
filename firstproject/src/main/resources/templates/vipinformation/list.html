@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>VIP编号</th>
+        <th>VIP性名</th>
+        <th>VIP年龄</th>
+        <th>VIP职业</th>
+        <th>VIP入会时间</th>
+    </tr>
+
+    <tr th:each="vipinformation    : ${}">
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+    </tr>
+</table>
+</body>
+</html>
