@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>消费信息编号</th>
+        <th>VIP编号</th>
+        <th>VIP性名</th>
+        <th>商品编号</th>
+        <th>商品名称</th>
+        <th>商品价格</th>
+        <th>商品实际价格</th>
+    </tr>
+
+    <tr th:each="vip_ci : ${}">
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+        <td th:text="${}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            top: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            display: inline-block;
+            width: 150px;
+        }
+
+        .li1 {
+            background: #f30630;
+            width: 150px;
+            text-align: center;
+        }
+
+        .li2 {
+            background: #FFC0CB;
+            margin-left: -40px;
+        }
+        div{
+            margin-left: -30px;
+        }
+    </style>
+</head>
+<script>
+    window.onload = function() {
+        f1.onclick = function() {
+            if(ul1.style.display == "none") {
+                ul1.style.display = "block";
+                ul2.style.display = "none";
+                ul3.style.display = "none";
+
+            } else {
+                ul1.style.display = "none";
+            }
+        }
+
+        f2.onclick = function() {
+            if(ul2.style.display == "none") {
+                ul2.style.display = "block";
+                ul1.style.display = "none";
+                ul3.style.display = "none";
+            } else {
+                ul2.style.display = "none";
+            }
+        }
+
+        f3.onclick = function() {
+            if(ul3.style.display == "none") {
+                ul3.style.display = "block";
+                ul1.style.display = "none";
+                ul2.style.display = "none";
+                ul4.style.display = "none";
+            } else {
+                ul3.style.display = "none";
+            }
+        }
+        f4.onclick = function() {
+            if(ul4.style.display == "none") {
+                ul4.style.display = "block";
+                ul1.style.display = "none";
+                ul2.style.display = "none";
+                ul3.style.display = "none";
+            } else {
+                ul4.style.display = "none";
+            }
+        }
+    }
+</script>
+
+<body>
+
+<div>
+    <ul>
+        <li class="li1">
+            <a href="#" id="f1">商品信息管理</a>
+            <ul id="ul1" style="display: none;">
+                <li class="li2">
+                    <a href="../commodity/commodityInsert.html" target="center">增加商品信息</a>
+                </li>
+                <li class="li2">
+                    <a href="/queryCommodity" target="center">管理商品信息</a>
+                </li>
+            </ul>
+        </li>
+        <li class="li1">
+            <a href="#" id="f2">VIP信息管理</a>
+            <ul id="ul2" style="display: none;">
+                <li class="li2">
+                    <a href="" target="center">增加VIP信息</a>
+                </li>
+                <li class="li2">
+                    <a href="" target="center">管理VIP信息</a>
+                </li>
+            </ul>
+
+        </li>
+        <li class="li1">
+            <a href="#" id="f3">VIP消费信息管理</a>
+            <ul id="ul3" style="display: none;">
+                <li class="li2">
+                    <a href="" target="center">增加VIP消费信息</a>
+                </li>
+                <li class="li2">
+                    <a href="" target="center">管理VIP消费信息</a>
+                </li>
+            </ul>
+        </li>
+        <li class="li1">
+            <a href="#" id="f4">用户管理</a>
+            <ul id="ul4" style="display: none;">
+                <li class="li2">
+                    <a href="/query" target="center">查看用户</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #frame1{
+            border-bottom: red solid 1px;
+        }
+        #frame2{
+            border-right: red solid 1px;
+            background-color: bisque;
+        }
+    </style>
 </head>
-<body>
-
-
-    <form action="/query" method="post">
-        <input type="submit" value="dianji" />
-    </form>
-</body>
+    <frameset rows=102,100% frameSpacing=0 frameBorder=no noResize="true" name=topset cols="*">
+        <frame id="frame1" marginHeight=0 marginWidth=0 noResize="true" scrolling=no src="static/framework/head.html">
+        <frameset cols=188,100% frameSpacing=0 noResize="true" >
+            <frame id="frame2" marginHeight=0 marginWidth=0 noResize="true" scrolling=no src="static/framework/left.html">
+            <frameset rows=100% frameBorder=no frameSpacing=0 noResize="true" name=topset cols="*">
+                <frame name="center" marginHeight=0 marginWidth=0 noResize="true" scrolling=auto src="static/framework/body.html">
+            </frameset>
+        </frameset>
+    </frameset>
 </html>
