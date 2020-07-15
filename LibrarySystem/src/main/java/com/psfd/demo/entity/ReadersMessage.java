@@ -1,11 +1,13 @@
 package com.psfd.demo.entity;
 
-import com.baomidou.mybatisplus.enums.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotations.TableId;
-import com.baomidou.mybatisplus.activerecord.Model;
-import com.baomidou.mybatisplus.annotations.TableName;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -13,7 +15,7 @@ import java.io.Serializable;
  * </p>
  *
  * @author Mht
- * @since 2020-07-11
+ * @since 2020-07-14
  */
 @TableName("readers_message")
 public class ReadersMessage extends Model<ReadersMessage> {

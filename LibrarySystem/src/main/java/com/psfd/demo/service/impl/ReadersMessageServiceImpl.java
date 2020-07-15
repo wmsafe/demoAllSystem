@@ -1,9 +1,9 @@
 package com.psfd.demo.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.psfd.demo.entity.ReadersMessage;
 import com.psfd.demo.mapper.ReadersMessageMapper;
 import com.psfd.demo.service.IReadersMessageService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author Mht
- * @since 2020-07-11
+ * @since 2020-07-14
  */
 @Service
 public class ReadersMessageServiceImpl extends ServiceImpl<ReadersMessageMapper, ReadersMessage> implements IReadersMessageService {

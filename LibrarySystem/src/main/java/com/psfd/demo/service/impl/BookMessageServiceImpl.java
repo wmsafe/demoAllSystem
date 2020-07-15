@@ -1,9 +1,9 @@
 package com.psfd.demo.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.psfd.demo.entity.BookMessage;
 import com.psfd.demo.mapper.BookMessageMapper;
 import com.psfd.demo.service.IBookMessageService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author Mht
- * @since 2020-07-11
+ * @since 2020-07-14
  */
 @Service
 public class BookMessageServiceImpl extends ServiceImpl<BookMessageMapper, BookMessage> implements IBookMessageService {
