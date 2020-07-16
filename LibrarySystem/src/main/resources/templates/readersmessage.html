@@ -10,12 +10,16 @@
             text-align: center;
         }
         .td1{
-            width: 300px;
+            width: 200px;
             background-color: #C8EBFA;
 
         }
         .td2{
             width: 100px;
+            background-color: #C8EBFA;
+        }
+        .td3{
+            width: 120px;
             background-color: #C8EBFA;
         }
 
@@ -66,7 +70,7 @@
             transition: all 0.3s;
         }
         div{
-            margin-left: 650px;
+            margin-left: 1150px;
         }
         tr:hover{
             background-color: #C8EFD4;
@@ -78,17 +82,28 @@
 <div><a class="a3" href="addreaders.html">增加读者类型信息</a></div>
 <table border="1">
     <tr>
-        <td class="td1">读者类型名称</td>
-        <td class="td1">可借数量</td>
+        <td class="td1">条形码</td>
+        <td class="td3">姓名</td>
+        <td class="td3">读者类型</td>
+        <td class="td3">证件类型</td>
+        <td class="td1">证件号码</td>
+        <td class="td3">电话</td>
+        <td class="td1">Email</td>
         <td class="td2">修改</td>
         <td class="td2">删除</td>
     </tr>
     <tr th:each="list,readers:${readerslist}">
+        <td th:text="${list.getBarcode()}"></td>
         <td th:text="${list.getName()}"></td>
-        <td th:text="${list.getNumber()}"></td>
+        <td th:text="${list.getVocation()}"></td>
+        <td th:text="${list.getPapertype()}"></td>
+        <td th:text="${list.getPaperno()}"></td>
+        <td th:text="${list.getTel()}"></td>
+        <td th:text="${list.getEmail()}"></td>
         <td><a class="a1" th:href="@{'readersupdate?id='+${list.getId()}}">修改</a></td>
         <td><a class="a2" th:href="@{'removereaders?id='+${list.getId()}}">删除</a></td>
     </tr>
 </table>
+
 </body>
 </html>

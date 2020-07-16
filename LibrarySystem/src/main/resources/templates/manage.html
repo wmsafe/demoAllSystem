@@ -9,8 +9,7 @@
 <frameset rows="59,*" cols="*" frameborder="no" border="0" framespacing="0">
   <frame src="top.html" name="topFrame" scrolling="no" noresize="noresize" id="topFrame" title="topFrame" />
   <frameset cols="213,*" frameborder="no" border="0" framespacing="0">
-    <frame  th:each="user,username:${user}" src="left.html" name="leftFrame" scrolling="no" noresize="noresize" id="leftFrame" title="leftFrame" />
-    <div th:text="${user.getUsername()}"></div>
+    <frame  src="left.html" name="leftFrame" scrolling="no" noresize="noresize" id="leftFrame" title="leftFrame" />
     <frame src="mainfra.html" name="mainFrame" id="mainFrame" title="mainFrame" />
   </frameset>
 </frameset>

@@ -12,7 +12,7 @@
 </head>
 <body>
     <form action="updatereaders" method="POST">
-        <input style="display: none" type="text" name="id"  th:value="${readersType2.getId()}">
+        <input style="display: none" type="text" name="id" th:value="${readersType2.getId()}">
         新的读者类型名称:<input type="text" name="name" th:value="${readersType2.getName()}"><br><br>
         新的可借数量:<input type="text" name="number" th:value="${readersType2.getNumber()}"><br><br>
         <input type="submit" value="确认修改">
