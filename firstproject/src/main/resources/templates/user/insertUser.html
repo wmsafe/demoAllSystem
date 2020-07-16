@@ -23,18 +23,8 @@
 <script type="text/html"></script>
 <script>
     function check(form) {
-        if(form.username.value === "" && form.password.value === "" && form.quanxian.value === ""){
+        if (form.username.value === "" && form.password.value === "" && form.quanxian.value === "") {
             alert("请输入！！！");
-        }else if(form.username.value === "" && form.password.value === ""){
-            alert("请输入username和password！！！");
-        }else if(form.password.value === "" && form.quanxian.value === ""){
-            alert("请输入password和quanxian！！！");
-        }else if (form.username.value === "" && form.quanxian.value === ""){
-            alert("请输入username和quanxian！！！");
-        }else if (form.password.value === "" && form.quanxian.value === ""){
-            alert("请输入password和quanxian！！！");
-        }else{
-            alert("请输入quanxian！！！");
         }
     }
 </script>
@@ -43,7 +33,7 @@
         <b style="color: #ffffff">用户操作》》》注册新用户</b>
     </div>
     <div id="div1">
-        <form action="" method="post" name="form">
+        <form action="/insertUser" method="post">
             用户名: <input type="text" name="username" /><br><br>
             密&nbsp;&nbsp;&nbsp;码: <input type="password" name="password" /><br><br>
             权&nbsp;&nbsp;&nbsp;限: <input type="text" name="quanxian" /><br><br>

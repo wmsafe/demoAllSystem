@@ -30,16 +30,24 @@ public class UserController {
         System.out.println(username + "-------" + password);
         List<User> list = userServicel.list();
         ModelAndView andView = new ModelAndView();
-        if(username.equals("") || password.equals("")){
-            andView.setViewName("/login/login");
-            return andView;
-        }
-
-        for (User user : list) {
-            if (username.equals(user.getUsername()) && password.equals(user.getPassword())){
-                andView.setViewName("/framework/framework");
+        try {
+            if(username == null || password == null){
+                andView.setViewName("/login/login");
                 return andView;
             }
+        }catch (NullPointerException e){
+            e.printStackTrace();
+        }
+
+        try {
+            for (User user : list) {
+                if (username.equals(user.getUsername()) && password.equals(user.getPassword())){
+                    andView.setViewName("/framework/framework");
+                    return andView;
+                }
+            }
+        }catch (NullPointerException e){
+            e.printStackTrace();
         }
         andView.setViewName("/login/false");
         return andView;
@@ -49,6 +57,25 @@ public class UserController {
     public ModelAndView userList() {
         ModelAndView andView = new ModelAndView();
         andView.addObject("userList",userServicel.list());
+        andView.setViewName("/user/userList");
+        return andView;
+    }
+
+    @RequestMapping("/insertUser")
+    public ModelAndView addUser(User user) {
+        ModelAndView andView = new ModelAndView();
+        if (user == null){
+            andView.setViewName("/user/insertUser");
+            return andView;
+        }
+        List<User> userList = userServicel.list();
+        for (User user1 : userList) {
+            if (user.getUsername().equals(user1.getUsername())){
+                 return null;
+            }
+        }
+        userServicel.save(user);
+        andView.addObject("userList",userList);
         andView.setViewName("/user/userList");
         return andView;
     }

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            border: red 1px solid;
+            width: 550px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 20px;
+            background-color: #1e5cba;
+            color: white;
+        }
+        #div2{
+            border: red 1px solid;
+            height: 20px;
+            background-color: #1b6d85;
+        }
+    </style>
+</head>
+<body>
+    <div id="div2">
+        <b style="color: #ffffff">商品信息操作》》》修改商品</b>
+    </div>
+    <div id="div1">
+        <form action="/updateTwo" method="post">
+            <input name="commodityId" type="text" style="display: none" th:value="${commodity.getCommodityId()}" >
+            商品名称: <input type="text" name="commodityName" th:value="${commodity.getCommodityName()}" /><br><br>
+            商品价格: <input type="text" name="price" th:value="${commodity.getPrice()}" /><br><br>
+            商品折扣: <input type="text" name="agio" th:value="${commodity.getAgio()}" /><br><br>
+            <input type="submit" value="提交" />
+        </form>
+    </div>
+</body>
+</html>

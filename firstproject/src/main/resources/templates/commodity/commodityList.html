@@ -6,16 +6,63 @@
     <style>
         *{
             margin: 0 auto;
+            text-align: center;
+        }
+        table{
+            width: 800px;
+        }
+        .a1 {
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: #94D8F6;
+            color: white;
+        }
+        .a1:hover{
+            background-color: #60C5F1;
+            transition: all 0.3s;
+        }
+
+        .a2 {
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: #E8454B;
+            color: white;
+        }
+        .a2:hover{
+            background-color: #BA0007;
+            transition: all 0.3s;
+        }
+        .th1{
+            background-color: #1b6d85;
+            color: white;
+        }
+        tr:hover{
+            background-color: #aff8f0;
+        }
+        body{
+            background-color: #afad9a;
         }
     </style>
 </head>
 <body>
     <table border="1">
         <tr>
-            <th>商品编号</th>
-            <th>商品名称</th>
-            <th>商品价格</th>
-            <th>商品折扣</th>
+            <th class="th1">商品编号</th>
+            <th class="th1">商品名称</th>
+            <th class="th1">商品价格</th>
+            <th class="th1">商品折扣</th>
+            <th class="th1">修改</th>
+            <th class="th1">删除</th>
         </tr>
 
         <tr th:each="commodity : ${commodityList}">
@@ -23,6 +70,8 @@
             <td th:text="${commodity.commodityName}"></td>
             <td th:text="${commodity.price}"></td>
             <td th:text="${commodity.agio}"></td>
+            <td><a class="a1" th:href="@{'/updateOne?commodityId='+${commodity.getCommodityId()}}">修改</a></td>
+            <td><a class="a2" th:href="@{'/delete?commodityId='+${commodity.getCommodityId()}}">删除</a></td>
         </tr>
     </table>
 </body>
