@@ -4,14 +4,15 @@ server:
 spring:
   thymeleaf:
     mode: HTML5
-#  mvc:
-#    static-path-pattern: /static/**
+    cache: false
+  mvc:
+    static-path-pattern: /static/**
   resources:
     static-locations: classpath:/static,classpath:/templates
   # 配置数据源
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/smci_mysql?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/smci_mysql?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
     username: root
     password: 456789
 # mybatis-plus相关配置
@@ -27,14 +28,12 @@ mybatis-plus:
   #field-strategy: NOT_EMPTY
   #数据库类型
   #  db-type: MYSQL
-  #  configuration:
-  # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
-  map-underscore-to-camel-case: true
   # 如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段
   # call-setters-on-nulls: true
   # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
   # log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-
-
+  # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
+  configuration:
+    map-underscore-to-camel-case: false
 
 

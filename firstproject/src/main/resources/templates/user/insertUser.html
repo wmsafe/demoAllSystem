@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            border: red 1px solid;
+            width: 550px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 20px;
+            background-color: #1e5cba;
+            color: white;
+        }
+        #div2{
+            border: red 1px solid;
+            height: 20px;
+            background-color: #1b6d85;
+        }
+    </style>
+</head>
+<script type="text/html"></script>
+<script>
+    function check(form) {
+        if (form.username.value === "" && form.password.value === "" && form.quanxian.value === "") {
+            alert("请输入！！！");
+        }
+    }
+</script>
+<body>
+    <div id="div2">
+        <b style="color: #ffffff">用户操作》》》注册新用户</b>
+    </div>
+    <div id="div1">
+        <form action="/insertUser" method="post">
+            用户名: <input type="text" name="username" /><br><br>
+            密&nbsp;&nbsp;&nbsp;码: <input type="password" name="password" /><br><br>
+            权&nbsp;&nbsp;&nbsp;限: <input type="text" name="quanxian" /><br><br>
+            <input type="submit" value="增加" onclick="check(form)" />
+        </form>
+    </div>
+</body>
+</html>

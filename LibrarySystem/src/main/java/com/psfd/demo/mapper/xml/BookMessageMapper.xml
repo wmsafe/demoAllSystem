@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.psfd.demo.mapper.BookMessageMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.psfd.demo.entity.BookMessage">
+        <id column="id" property="id" />
+        <result column="barcode" property="barcode" />
+        <result column="bookname" property="bookname" />
+        <result column="typeid" property="typeid" />
+        <result column="author" property="author" />
+        <result column="translator" property="translator" />
+        <result column="isbn" property="isbn" />
+        <result column="price" property="price" />
+        <result column="page" property="page" />
+        <result column="bookcase" property="bookcase" />
+        <result column="intime" property="intime" />
+        <result column="operator" property="operator" />
+        <result column="del" property="del" />
+    </resultMap>
+
+</mapper>

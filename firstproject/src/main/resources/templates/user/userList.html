@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0 auto;
+            text-align: center;
+        }
+        table{
+            height: 100px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/static/login/login.html">返回登录页面</a><br><br>
+    <table border="1">
+        <tr>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>权限</th>
+        </tr>
+
+        <tr th:each="user : ${userList}">
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+            <td th:text="${user.quanxian}"></td>
+        </tr>
+    </table>
+</body>
+</html>
