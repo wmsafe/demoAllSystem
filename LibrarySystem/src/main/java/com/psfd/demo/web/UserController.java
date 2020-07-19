@@ -25,7 +25,7 @@ public class UserController {
     IUserService iUserService;
 
 
-    @RequestMapping("login")
+    @RequestMapping("/login")
     public ModelAndView login(String username,String password) {
         System.out.println(username+"-----"+password);
         ModelAndView modelAndView = new ModelAndView();
